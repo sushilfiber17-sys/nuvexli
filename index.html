@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuvexli - Free Online Tools</title>
+
+    <meta name="description"
+          content="Nuvexli offers free online tools for calculations, text editing and image conversion. Simple, fast and easy to use.">
+
+    <meta name="keywords"
+          content="free online tools, word counter, percentage calculator, image resizer, Nuvexli">
+
+    <meta name="author" content="Sushil Modanwal">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">Nuvexli<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#tools">Tools</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-btn" type="button">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <span class="badge">FREE ONLINE TOOLS</span>
+
+            <h1>Useful Tools.<br><span>Zero Hassle.</span></h1>
+
+            <p>
+                Simple, fast and free online tools for your everyday digital tasks.
+                No complicated setup. Just choose a tool and get started.
+            </p>
+
+            <a href="#tools" class="primary-btn">Explore Tools →</a>
+
+            <div class="owner-badge">
+                Created & Managed by <strong>Sushil Modanwal</strong>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="tools-section" id="tools">
+
+            <div class="section-heading">
+                <h2>Explore Our Tools</h2>
+                <p>Find the right tool for your everyday needs.</p>
+            </div>
+
+            <input
+                type="search"
+                id="toolSearch"
+                class="search-box"
+                placeholder="Search tools..."
+                aria-label="Search online tools"
+            >
+
+            <div class="tools-grid">
+
+                <!-- Word Counter -->
+                <article class="tool-card" data-name="word counter text character">
+                    <div class="tool-icon">📝</div>
+                    <h3>Word Counter</h3>
+                    <p>Count words, characters and sentences in your text.</p>
+
+                    <textarea id="wordInput"
+                              placeholder="Type or paste your text here..."
+                              aria-label="Text to count"></textarea>
+
+                    <div class="result-row">
+                        <span>Words: <strong id="wordCount">0</strong></span>
+                        <span>Characters: <strong id="charCount">0</strong></span>
+                    </div>
+                </article>
+
+                <!-- Text Case Converter -->
+                <article class="tool-card" data-name="text case converter uppercase lowercase">
+                    <div class="tool-icon">🔠</div>
+                    <h3>Text Case Converter</h3>
+                    <p>Convert text to uppercase or lowercase.</p>
+
+                    <textarea id="caseInput"
+                              placeholder="Enter your text..."
+                              aria-label="Text to convert"></textarea>
+
+                    <div class="button-row">
+                        <button class="small-btn" id="upperBtn" type="button">
+                            UPPERCASE
+                        </button>
+
+                        <button class="small-btn" id="lowerBtn" type="button">
+                            lowercase
+                        </button>
+                    </div>
+
+                    <textarea id="caseOutput"
+                              placeholder="Converted text appears here..."
+                              aria-label="Converted text"
+                              readonly></textarea>
+
+                    <button class="small-btn" id="copyCaseBtn" type="button">
+                        Copy Result
+                    </button>
+                </article>
+
+                <!-- Percentage Calculator -->
+                <article class="tool-card" data-name="percentage calculator maths">
+                    <div class="tool-icon">📊</div>
+                    <h3>Percentage Calculator</h3>
+                    <p>Calculate what percentage one number is of another.</p>
+
+                    <label for="percentPart">Your number</label>
+                    <input id="percentPart" type="number" placeholder="e.g. 420">
+
+                    <label for="percentTotal">Total number</label>
+                    <input id="percentTotal" type="number" placeholder="e.g. 500">
+
+                    <button class="primary-btn full-btn" id="percentBtn" type="button">
+                        Calculate
+                    </button>
+
+                    <p class="result" id="percentResult" aria-live="polite">
+                        Result will appear here.
+                    </p>
+                </article>
+
+                <!-- Discount Calculator -->
+                <article class="tool-card" data-name="discount calculator shopping price">
+                    <div class="tool-icon">🏷️</div>
+                    <h3>Discount Calculator</h3>
+                    <p>Find the discount amount and final price.</p>
+
+                    <label for="originalPrice">Original price (₹)</label>
+                    <input id="originalPrice" type="number" min="0" placeholder="e.g. 1000">
+
+                    <label for="discountPercent">Discount (%)</label>
+                    <input id="discountPercent" type="number" min="0" max="100"
+                           placeholder="e.g. 20">
+
+                    <button class="primary-btn full-btn" id="discountBtn" type="button">
+                        Calculate Discount
+                    </button>
+
+                    <p class="result" id="discountResult" aria-live="polite">
+                        Result will appear here.
+                    </p>
+                </article>
+
+                <!-- Age Calculator -->
+                <article class="tool-card" data-name="age calculator date birthday">
+                    <div class="tool-icon">🎂</div>
+                    <h3>Age Calculator</h3>
+                    <p>Calculate your age using your date of birth.</p>
+
+                    <label for="birthDate">Date of birth</label>
+                    <input id="birthDate" type="date">
+
+                    <button class="primary-btn full-btn" id="ageBtn" type="button">
+                        Calculate Age
+                    </button>
+
+                    <p class="result" id="ageResult" aria-live="polite">
+                        Your age will appear here.
+                    </p>
+                </article>
+
+                <!-- Image Resizer -->
+                <article class="tool-card" data-name="image resizer resize photo">
+                    <div class="tool-icon">🖼️</div>
+                    <h3>Image Resizer</h3>
+                    <p>Resize an image to your required dimensions.</p>
+
+                    <input type="file" id="resizeFile" accept="image/*"
+                           aria-label="Choose image to resize">
+
+                    <label for="resizeWidth">Width (pixels)</label>
+                    <input id="resizeWidth" type="number" min="1" placeholder="Width">
+
+                    <label for="resizeHeight">Height (pixels)</label>
+                    <input id="resizeHeight" type="number" min="1" placeholder="Height">
+
+                    <button class="primary-btn full-btn" id="resizeBtn" type="button">
+                        Resize Image
+                    </button>
+
+                    <canvas id="resizeCanvas" hidden></canvas>
+
+                    <a id="resizeDownload" class="download-link" hidden>
+                        Download Resized Image
+                    </a>
+
+                    <p class="result" id="resizeResult" aria-live="polite"></p>
+                </article>
+
+                <!-- Image Converter -->
+                <article class="tool-card" data-name="image converter jpg png convert">
+                    <div class="tool-icon">🔄</div>
+                    <h3>JPG / PNG Converter</h3>
+                    <p>Convert an image to JPG or PNG format.</p>
+
+                    <input type="file" id="convertFile" accept="image/*"
+                           aria-label="Choose image to convert">
+
+                    <label for="convertFormat">Output format</label>
+                    <select id="convertFormat">
+                        <option value="image/png">PNG</option>
+                        <option value="image/jpeg">JPG</option>
+                    </select>
+
+                    <button class="primary-btn full-btn" id="convertBtn" type="button">
+                        Convert Image
+                    </button>
+
+                    <a id="convertDownload" class="download-link" hidden>
+                        Download Converted Image
+                    </a>
+
+                    <p class="result" id="convertResult" aria-live="polite"></p>
+                </article>
+
+                <!-- Text Cleaner -->
+                <article class="tool-card" data-name="text cleaner remove spaces text formatting">
+                    <div class="tool-icon">🧹</div>
+                    <h3>Text Cleaner</h3>
+                    <p>Remove extra spaces and clean up your text.</p>
+
+                    <textarea id="cleanInput"
+                              placeholder="Paste text to clean..."
+                              aria-label="Text to clean"></textarea>
+
+                    <button class="primary-btn full-btn" id="cleanBtn" type="button">
+                        Clean Text
+                    </button>
+
+                    <textarea id="cleanOutput"
+                              placeholder="Cleaned text appears here..."
+                              aria-label="Cleaned text"
+                              readonly></textarea>
+
+                    <button class="small-btn" id="copyCleanBtn" type="button">
+                        Copy Cleaned Text
+                    </button>
+                </article>
+
+            </div>
+
+            <p id="noToolsMessage" class="no-results" hidden>
+                No tools found. Try another search.
+            </p>
+        </section>
+
+        <!-- About Preview -->
+        <section class="about-preview">
+            <h2>About Nuvexli</h2>
+
+            <p>
+                Nuvexli is a free online tools platform created to make everyday
+                digital tasks simple, convenient and accessible.
+            </p>
+
+            <p class="founder-line">
+                Founder & Owner: <strong>Sushil Modanwal</strong>
+            </p>
+
+            <a href="about.html" class="text-link">Learn more about us →</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="index.html" class="logo">Nuvexli<span>.</span></a>
+
+        <p>Simple tools for everyday tasks.</p>
+
+        <p class="footer-owner">
+            Founded & Owned by <strong>Sushil Modanwal</strong>
+        </p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <p class="copyright">
+            © <span id="year"></span> Nuvexli. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
